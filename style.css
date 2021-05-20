@@ -877,17 +877,18 @@ button:hover{
     align-items: center;
   }
   .telefono i {
-    margin-top: 70px;
-    margin-left: 115px;
+    margin-top: 135px;
+    margin-left: 114px;
     padding: 15px 0;
   }
   .correo-electronico i {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     margin-left: 185px;
     font-size: 16px;
-    text-decoration: none;
   }
-
+  .mensaje-form p {
+    text-align: center;
+  }
   .redes-sociales i {
     font-size: 24px;
     margin-left: -60px;
@@ -895,10 +896,17 @@ button:hover{
     padding: 24px;
   }
   .title-copy {
-    font-size: 15px;
-    width: 100%;
+    font-size: 12px;
+    width: 98%;
     height: 40%;
+    text-align: center;
     margin-left: -10px;
-    margin-bottom: 35px;
+    margin-bottom: 60px;
+  }
+  .skew-abajo {
+    display: none;
+  }
+  .skew-arriba {
+    display: none;
   }
 }
