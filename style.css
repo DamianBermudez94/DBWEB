@@ -6,7 +6,7 @@
 body {
   background: #fff;
   overflow-x: hidden;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /** Go top **/
@@ -70,7 +70,7 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background: #fff;
+  background: rgba(83, 83, 83, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,14 +78,16 @@ body {
 }
 
 .menu .logo-box {
-  margin-left: 5px;
+  margin-left: 25px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
 }
 .menu .logo-box h1 a {
   text-decoration: none;
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 4px;
-  color: #000;
+  color: rgb(255, 136, 136);
 }
 
 .menu .container {
@@ -109,12 +111,10 @@ body {
 }
 
 .menu .container .list li a.active {
-  background: rgb(255, 80, 80);
-  color: #fff;
+  color: rgb(255, 136, 136);
 }
 .menu .container .list li a:hover {
-  background: rgb(255, 80, 80);
-  color: #fff;
+  color: rgb(245, 136, 136);
 }
 
 #btn-menu > .fa-bars {
@@ -126,13 +126,26 @@ body {
 /** IMG Header **/
 
 .header-img {
-  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.header-img::before {
   width: 100%;
   height: 100vh;
+  grid-column: 8 / 1;
+  grid-row: 6/1;
+  content: "";
   background: url("Imagenes/banner-jpg.jpg");
-  background-attachment: fixed;
-  background-position: center;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: show 2s cubic-bezier(0.17, 0.67, 0, 1) forwards;
 }
 
 .header-img .welcome {
@@ -141,7 +154,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,18 +164,41 @@ body {
   font-size: 50px;
   color: #fff;
   font-weight: 200;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: show 2s forwards, move 1s 2s forwards;
+  transform: translate(50%);
 }
+
+@keyframes move {
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes show {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 .header-img .welcome hr {
   width: 400px;
   height: 2px;
   background: #fff;
   border: none;
   margin-top: 5px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: show 2s forwards, move 1s 2s forwards;
+  transform: translate(50%);
 }
 .header-img .welcome p {
   font-size: 20px;
   color: #fff;
   margin-top: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: show 2s forwards, move 1s 2s forwards;
+  transform: translate(50%);
 }
 
 .header-img .welcome > button {
@@ -173,6 +209,9 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: show 2s forwards, move 1s 2s forwards;
+  transform: translate(50%);
 }
 
 button:hover {
@@ -317,7 +356,7 @@ button:hover{
 }
 
 .acerca-de .info-containar .leer-mas button:hover {
-  background: rgb(80, 173, 248);
+  background: rgba(5, 5, 5);
 }
 
 /*--- Fin del  Acerca de nosotros ----*/
@@ -428,14 +467,14 @@ button:hover{
 
 .btn-slider:hover {
   color: rgb(255, 80, 80);
-  background: rgba(158, 157, 157, 0.8);
+  background: rgba(158, 157, 157, 0.9);
   border-radius: 50%;
 }
 .proyects .containar-proyects .slider_btn-right {
-  right: 10px;
+  right: 50px;
 }
 .proyects .containar-proyects .slider_btn-left {
-  left: 10px;
+  left: 50px;
 }
 
 /*.proyects .containar-proyects .slider img{
@@ -448,97 +487,105 @@ button:hover{
 
 /**----- Fin del Mis Proyectos -----**/
 
-/** ---- Comentarios ----**/
+/** ---- Mis Servicios ----**/
 
-.comentarios {
+.mis-servicios {
   width: 100%;
-  margin-top: 120px;
 }
 
-.comentarios .comentarios-title {
+.mis-servicios .servicios-title {
   width: 50%;
   margin: auto;
   text-align: center;
 }
 
-.comentarios .comentarios-title h2 {
+.mis-servicios .servicios-title h2 {
   font-size: 50px;
   color: #000;
   font-weight: normal;
   margin-bottom: 10px;
 }
-.comentarios .comentarios-title hr {
-  width: 80%;
+.mis-servicios .servicios-title hr {
+  width: 60%;
   margin: auto;
   height: 2px;
   background: #000;
   border: none;
 }
 
-.comentarios .box-comentarios {
-  width: 90%;
-  margin: 80px auto;
+.mis-servicios .box-servicios {
+  width: 100%;
+  height: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+
+  padding: 15px;
 }
 
-.comentarios .box-comentarios .card-comentarios {
-  width: 45%;
-  margin: 20px;
-}
-
-.comentarios .box-comentarios .card-comentarios .card-img {
+.mis-servicios .box-servicios .card-servicios {
   width: 100%;
+  height: 100%;
+  margin: 50px;
+}
+
+.mis-servicios .box-servicios .card-servicios .card-img {
+  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.comentarios .box-comentarios .card-comentarios .card-img img {
-  width: 200px;
-  height: 200px;
+.mis-servicios .box-servicios .card-servicios .card-img i {
+  font-size: 65px;
+  border: 2px solid #000;
   border-radius: 50%;
-  object-fit: cover;
+  width: 150px;
+  height: 150px;
   cursor: pointer;
+  text-align: center;
+  padding: 40px;
 }
 
-.comentarios .box-comentarios .card-comentarios .comentarios-text {
+.mis-servicios .box-servicios .card-servicios .servicios-text {
   width: 100%;
-  border: 2px solid rgb(255, 80, 80);
+  height: 100%;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 9px;
   margin-top: 20px;
   cursor: pointer;
   transition: 200ms;
 }
-.comentarios .box-comentarios .card-comentarios .comentarios-text h4 {
-  color: rgb(255, 80, 80);
-  font-weight: normal;
+.mis-servicios .box-servicios .card-servicios .servicios-text h4 {
+  color: rgb(0, 0, 0);
+  font-weight: gold;
   font-size: 27px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   transition: 200ms;
 }
-.comentarios .box-comentarios .card-comentarios .comentarios-text p {
+.mis-servicios .box-servicios .card-servicios .servicios-text p {
   font-size: 18px;
   color: #000;
-  text-align: center;
-  text-align: justify;
-  line-height: 24px;
+
+  text-align: left;
+  line-height: 20px;
   transition: 200ms;
 }
-.comentarios .box-comentarios .card-comentarios .comentarios-text:hover {
-  border: 2px solid rgb(76, 104, 230);
+.mis-servicios .box-servicios .card-servicios .servicios-text:hover {
+  border: 2px solid rgb(255, 80, 80);
 }
-.comentarios .box-comentarios .card-comentarios .comentarios-text:hover h4 {
-  color: rgb(85, 113, 238);
+.mis-servicios .box-servicios .card-servicios .servicios-text:hover h4 {
+  color: rgb(255, 80, 80);
 }
 
 /**----- Fin de comentarios ----**/
 
 /**---- Footer ----**/
 
-.footer {
+.formulario-contacto {
   position: relative;
   width: 100%;
   height: 100%;
@@ -547,40 +594,38 @@ button:hover{
   background-position: center;
   background-size: cover;
 }
-.footer .deg-footer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
 
-.footer .ejeZfooter {
+.formulario-contacto .ejeZform {
   position: relative;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
-.footer .footer-content {
+.formulario-contacto .form-content {
   width: 90%;
   padding-top: 100px;
   margin: auto;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
-.footer .footer-content .footer-title {
-  width: 50%;
-  margin: auto;
+.formulario-content {
   border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 10px;
+}
+.formulario-contacto .form-content .form-title {
+  width: 90%;
+  margin: auto;
+
   padding: 20px;
 }
-.footer .footer-content .footer-title h2 {
+.formulario-contacto .form-content .form-title h2 {
   font-size: 35px;
   font-weight: 400;
   color: #fff;
   text-align: center;
   margin-bottom: 10px;
 }
-.footer .footer-content .footer-title hr {
+.formulario-contacto .form-content .form-title hr {
   width: 60%;
   margin: auto;
   height: 2px;
@@ -588,30 +633,19 @@ button:hover{
   border: none;
 }
 
-.footer .footer-content .formulario-content {
-  width: 50%;
-  height: 80%;
-  background: #fff;
-  border-radius: 20px;
-  border: 2px solid rgb(255, 80, 80);
-  margin: 50px auto;
-  padding: 30px;
-  margin-bottom: 65px;
-}
-
-.footer .footer-content .formulario-content #formulario {
+.formulario-contacto .form-content .formulario-content #formulario {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.footer .footer-content .formulario-content #formulario label {
+.formulario-contacto .form-content .formulario-content #formulario label {
   text-align: center;
-  color: #000;
+  color: #fff;
   font-size: 22px;
   margin: 30px 0 10px 0;
 }
-.footer .footer-content .formulario-content #formulario input {
+.formulario-contacto .form-content .formulario-content #formulario input {
   width: 70%;
   height: 40px;
   margin: auto;
@@ -622,7 +656,7 @@ button:hover{
   font-size: 17px;
   color: #000;
 }
-.footer .footer-content .formulario-content #formulario textarea {
+.formulario-contacto .form-content .formulario-content #formulario textarea {
   width: 90%;
   height: 200px;
   margin: auto;
@@ -634,13 +668,18 @@ button:hover{
   color: #000;
 }
 
-.footer .formulario-content #formulario .send {
+.formulario-contacto .formulario-content #formulario .send {
   margin: 30px;
   display: flex;
   justify-content: center;
 }
 
-.footer .footer-content .formulario-content #formulario .send button {
+.formulario-contacto
+  .form-content
+  .formulario-content
+  #formulario
+  .send
+  button {
   width: 150px;
   height: 40px;
   background: rgb(255, 80, 80);
@@ -655,130 +694,78 @@ button:hover{
   transition: 0.5s;
 }
 
-.footer .footer-content .formulario-content #formulario .send button:hover {
+.formulario-contacto
+  .form-content
+  .formulario-content
+  #formulario
+  .send
+  button:hover {
   background: rgba(82, 82, 82, 0.8);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 80, 80);
 }
-.footer .formulario-content #formulario .mensaje-form {
+.formulario-contacto .formulario-content #formulario .mensaje-form {
   width: 100%;
   margin: auto;
   padding: 20px;
 }
-.footer .formulario-content #formulario .mensaje-form p {
+.formulario-contacto .formulario-content #formulario .mensaje-form p {
   font-size: 19px;
-  color: var(--black);
+  color: #fff;
   line-height: 35px;
+  text-align: center;
+}
+/*--- Fin del Formulario ---*/
+
+/*--- Footer ---*/
+.footer {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+}
+.contenedor-informacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-copy {
+  align-items: center;
+  font-size: 17px;
+  margin: 15px;
+  font-weight: 300;
 }
 
-.footer .footer-content .contenedor-informacion {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  border-top: 5px solid #fff;
+.redes-sociales i {
+  font-size: 22px;
+  padding: 5px;
+  color: #000;
 }
-
-.footer .footer-content .footer-text {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 5px;
-  margin-left: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.contacto .telefono {
+  margin: 10px;
+  font-size: 16px;
+  color: #000;
 }
-.footer .footer-content .footer-text p {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-}
-.footer .footer-content .redes-sociales {
-  position: absolute;
-  bottom: 0;
-  left: 40%;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px 0;
-}
-.footer .footer-content .redes-sociales a {
-  color: #fff;
-  font-size: 30px;
-  padding: 10px;
-}
-.footer .footer-content .redes-sociales a i:hover {
-  color: rgb(255, 80, 80);
-  font-size: 35px;
-}
-/*
-.footer .footer-content .contenedor-informacion .contacto{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 200;
-    margin: 15px 5px;
-  
-}*/
-
-.footer .footer-content .contenedor-informacion .correo-electronico {
-  position: absolute;
-  right: 54%;
-  width: 70%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 200;
+.contacto .correo-electronico {
+  font-size: 16px;
+  margin-right: 10px;
   text-decoration: none;
+  color: #000;
 }
-.footer .footer-content .contenedor-informacion .telefono {
-  position: absolute;
-  top: 15px;
-  right: 58%;
-  width: 70%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 200;
-}
-
-.footer .footer-content .contenedor-informacion .correo-electronico i {
-  padding: 10px;
-  font-size: 20px;
-}
-.footer .footer-content .contenedor-informacion .telefono i {
-  padding: 10px;
-  font-size: 20px;
-}
-
 /**----Fin del footer -----**/
 
 /** Responsive **/
 
 @media screen and (max-width: 900px) {
   .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(83, 83, 83, 0.9);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
   }
   .tittle-web {
     position: absolute;
@@ -787,8 +774,8 @@ button:hover{
   }
   #btn-menu > .fa-bars {
     display: block;
-    margin-left: 370px;
     font-size: 28px;
+    margin: auto 280px;
   }
   .menu .container {
     position: absolute;
@@ -805,7 +792,7 @@ button:hover{
   }
 
   .menu .container .list li {
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
     border-bottom: 1px solid rgb(255, 1, 1);
   }
@@ -819,11 +806,12 @@ button:hover{
     color: rgb(255, 1, 1);
   }
   .title-welcome {
-    text-align: center;
-    font-size: 25px;
     padding: 25px;
+    font-size: 15px;
+    text-align: center;
   }
   .linea {
+    max-width: 200px;
     text-align: center;
     font-size: 28px;
     color: red;
@@ -839,69 +827,60 @@ button:hover{
     flex-direction: column-reverse;
   }
   .tecnologias {
-    min-width: 400px;
-  }
-  .estudios {
-    min-width: 400px;
-  }
-  .slider_img {
-    max-width: 300px;
-    height: 300px;
-  }
-  .title-comentarios {
-    text-align: center;
-  }
-  .card-comentarios {
-    display: block;
-    text-align: center;
-    margin: 0;
-  }
-
-  .comentarios-text {
-    display: block;
-    margin-left: -60px;
-    letter-spacing: normal;
-    min-width: 300px;
-  }
-
-  .footer-title {
-    min-width: 300px;
-    text-align: center;
-  }
-  .formulario-content {
     min-width: 350px;
   }
-  .contacto {
+  .estudios {
+    min-width: 350px;
+  }
+  .slider_img {
+    max-width: 280px;
+    height: 250px;
+  }
+  .title-servicios {
+    margin-top: 25px;
+  }
+  .box-servicios {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
-  .telefono i {
-    margin-top: 135px;
-    margin-left: 114px;
-    padding: 15px 0;
+
+  .formulario-content {
+    min-width: 320px;
+    margin: auto;
   }
-  .correo-electronico i {
-    margin-bottom: 3px;
-    margin-left: 185px;
-    font-size: 16px;
-  }
+
   .mensaje-form p {
     text-align: center;
   }
-  .redes-sociales i {
-    font-size: 24px;
-    margin-left: -60px;
-    margin-top: 15px;
-    padding: 24px;
+  .contenedor-informacion {
+    display: grid;
   }
-  .title-copy {
-    font-size: 12px;
-    width: 98%;
-    height: 40%;
+  .contacto {
+    margin: auto;
+  }
+  .redes-sociales {
     text-align: center;
-    margin-left: -10px;
-    margin-bottom: 60px;
+    font-size: 16px;
+  }
+  .telefono {
+    text-align: center;
+    font-size: 15px;
+  }
+  .correo-electronico i {
+    text-align: center;
+    font-size: 18px;
+
+    font-weight: 400;
+  }
+
+  .title-copy {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin: auto;
+
+    width: 100%;
   }
   .skew-abajo {
     display: none;
