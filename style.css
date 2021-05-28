@@ -17,7 +17,8 @@ body {
   width: 50px;
   height: 50px;
   border: 2px solid rgb(255, 80, 80);
-  background: #fff;
+  border-radius: 15px;
+  background: rgb(85, 85, 85, 0.5);
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -27,15 +28,15 @@ body {
 }
 .go-top:hover {
   /*border: 2px solid #fff;*/
-  border-radius: 50%;
-  background: rgb(255, 80, 80);
+  border-radius: 15px;
+  background: rgb(255, 80, 80, 0.5);
 }
 .go-top:hover span {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .go-top > span {
   font-size: 25px;
-  color: #000;
+  color: rgb(255, 85, 85);
 }
 /** Skew abajo - corte de las secciones  **/
 .skew-abajo {
@@ -128,24 +129,11 @@ body {
 .header-img {
   height: 100vh;
   width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-}
-
-.header-img::before {
-  width: 100%;
-  height: 100vh;
-  grid-column: 8 / 1;
-  grid-row: 6/1;
-  content: "";
   background: url("Imagenes/banner-jpg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: show 2s cubic-bezier(0.17, 0.67, 0, 1) forwards;
+  margin: auto;
 }
 
 .header-img .welcome {
@@ -171,17 +159,6 @@ body {
   transform: translate(50%);
 }
 
-@keyframes move {
-  to {
-    transform: translate(0);
-  }
-}
-@keyframes show {
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
 .header-img .welcome hr {
   width: 400px;
   height: 2px;
@@ -199,6 +176,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   animation: show 2s forwards, move 1s 2s forwards;
   transform: translate(50%);
+}
+
+@keyframes move {
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes show {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .header-img .welcome > button {
@@ -255,7 +243,7 @@ button:hover{
 }
 
 .acerca-de .info-containar {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -293,9 +281,10 @@ button:hover{
   width: 50%;
   height: 100%;
   margin: 10px 25px;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 10px;
   cursor: pointer;
+
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 .acerca-de .info-containar .info-estudios .tecnologias .fa-code {
@@ -304,12 +293,19 @@ button:hover{
 .acerca-de .info-containar .info-estudios .tecnologias p {
   font-size: 18px;
   font-weight: 300;
+  transition: all 0.5s;
+}
+.acerca-de .info-containar .info-estudios .tecnologias p:hover {
+  font-size: 24px;
+  font-weight: 300;
 }
 .acerca-de .info-containar .info-estudios .tecnologias .title {
   font-size: 25px;
+  margin: auto;
+  text-align: center;
 }
-.acerca-de .info-containar .info-estudios .tecnologias p > i {
-  font-size: 20px;
+.acerca-de .info-containar .info-estudios .tecnologias-icon {
+  font-size: 24px;
   padding: 5px;
 }
 
@@ -317,13 +313,14 @@ button:hover{
   width: 50%;
   height: 100%;
   margin: 10px 50px;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 .acerca-de .info-containar .info-estudios .estudios .title {
   font-size: 25px;
+  text-align: center;
 }
 
 .acerca-de .info-containar .info-estudios .estudios p {
@@ -344,7 +341,7 @@ button:hover{
   width: 150px;
   height: 50px;
   background: rgb(255, 80, 80);
-  border-radius: 14px;
+  border-radius: 10px;
   border: none;
   outline: none;
   font-size: 17px;
@@ -356,7 +353,7 @@ button:hover{
 }
 
 .acerca-de .info-containar .leer-mas button:hover {
-  background: rgba(5, 5, 5);
+  background: rgba(5, 5, 5, 0.8);
 }
 
 /*--- Fin del  Acerca de nosotros ----*/
@@ -393,7 +390,6 @@ button:hover{
   padding-top: 100px;
 }
 .proyects .containar-proyects .proyects-title {
-  border: 2px solid #fff;
   padding: 10px;
   text-align: center;
   width: 100%;
@@ -449,8 +445,9 @@ button:hover{
   height: 500px;
   object-fit: cover;
   cursor: pointer;
-  border: 3px solid rgb(255, 80, 80);
-  border-radius: 10px;
+  border: 2px solid rgb(255, 80, 80);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
 }
 
 .proyects .containar-proyects .btn-slider {
@@ -467,8 +464,6 @@ button:hover{
 
 .btn-slider:hover {
   color: rgb(255, 80, 80);
-  background: rgba(158, 157, 157, 0.9);
-  border-radius: 50%;
 }
 .proyects .containar-proyects .slider_btn-right {
   right: 50px;
@@ -519,8 +514,10 @@ button:hover{
   margin: auto;
   display: flex;
   justify-content: center;
-
   padding: 15px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: show 2s forwards, move 1s 2s forwards;
+  transform: translate(50%);
 }
 
 .mis-servicios .box-servicios .card-servicios {
@@ -640,10 +637,10 @@ button:hover{
 }
 
 .formulario-contacto .form-content .formulario-content #formulario label {
-  text-align: center;
   color: #fff;
   font-size: 22px;
-  margin: 30px 0 10px 0;
+  margin-left: 120px;
+  padding: 25px;
 }
 .formulario-contacto .form-content .formulario-content #formulario input {
   width: 70%;
@@ -654,7 +651,8 @@ button:hover{
   outline: none;
   border: 2px solid rgb(255, 80, 80);
   font-size: 17px;
-  color: #000;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .formulario-contacto .form-content .formulario-content #formulario textarea {
   width: 90%;
@@ -665,7 +663,8 @@ button:hover{
   outline: none;
   border: 2px solid rgb(255, 80, 80);
   font-size: 17px;
-  color: #000;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .formulario-contacto .formulario-content #formulario .send {
@@ -739,11 +738,7 @@ button:hover{
   padding: 5px;
   color: #000;
 }
-.contacto .telefono {
-  margin: 10px;
-  font-size: 16px;
-  color: #000;
-}
+
 .contacto .correo-electronico {
   font-size: 16px;
   margin-right: 10px;
@@ -754,7 +749,7 @@ button:hover{
 
 /** Responsive **/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 370px) {
   .menu {
     position: fixed;
     top: 0;
@@ -766,34 +761,37 @@ button:hover{
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
+    margin: auto;
   }
   .tittle-web {
     position: absolute;
     display: block;
+    text-align: center;
     font-size: 22px;
   }
   #btn-menu > .fa-bars {
     display: block;
     font-size: 28px;
-    margin: auto 280px;
+    margin: auto 285px;
   }
   .menu .container {
     position: absolute;
     top: 60px;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: calc(100vh - 60px);
     background: #fff;
   }
 
   .menu .container .list {
+    margin: auto;
     flex-direction: column;
     border-top: 5px solid rgb(255, 1, 1);
   }
 
   .menu .container .list li {
     width: 100%;
-    margin: 10px 0;
+    margin: 10px auto;
     border-bottom: 1px solid rgb(255, 1, 1);
   }
 
@@ -806,9 +804,9 @@ button:hover{
     color: rgb(255, 1, 1);
   }
   .title-welcome {
-    padding: 25px;
-    font-size: 15px;
+    margin: 10px;
     text-align: center;
+    font-size: 28px;
   }
   .linea {
     max-width: 200px;
