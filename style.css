@@ -598,14 +598,15 @@ button:hover{
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
 }
+
 .formulario-contacto .form-content {
   width: 90%;
   padding-top: 100px;
   margin: auto;
   padding-bottom: 70px;
 }
+
 .formulario-content {
-  border: 2px solid #fff;
   border-radius: 5px;
   margin: 10px;
 }
@@ -633,6 +634,7 @@ button:hover{
 .formulario-contacto .form-content .formulario-content #formulario {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -645,7 +647,7 @@ button:hover{
 .formulario-contacto .form-content .formulario-content #formulario input {
   width: 70%;
   height: 40px;
-  margin: auto;
+  margin: 20px;
   padding: 15px;
   border-radius: 10px;
   outline: none;
@@ -655,9 +657,9 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.7);
 }
 .formulario-contacto .form-content .formulario-content #formulario textarea {
-  width: 90%;
+  width: 70%;
   height: 200px;
-  margin: auto;
+  margin: 20px;
   padding: 25px;
   border-radius: 10px;
   outline: none;
@@ -667,28 +669,23 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.formulario-contacto .formulario-content #formulario .send {
+.formulario-contacto .formulario-content #formulario .btn-enviar {
   margin: 30px;
   display: flex;
   justify-content: center;
 }
 
-.formulario-contacto
-  .form-content
-  .formulario-content
-  #formulario
-  .send
-  button {
+.formulario-contacto .form-content .formulario-content #formulario .btn-enviar {
   width: 150px;
-  height: 40px;
+  height: 50px;
+
   background: rgb(255, 80, 80);
   border-radius: 15px;
   border: none;
   outline: none;
-  font-size: 22px;
+  font-size: 18px;
   color: #fff;
-  text-align: center;
-  margin-top: 20px;
+
   cursor: pointer;
   transition: 0.5s;
 }
@@ -697,8 +694,7 @@ button:hover{
   .form-content
   .formulario-content
   #formulario
-  .send
-  button:hover {
+  .btn-enviar:hover {
   background: rgba(82, 82, 82, 0.8);
   color: rgb(255, 80, 80);
 }
@@ -713,6 +709,7 @@ button:hover{
   line-height: 35px;
   text-align: center;
 }
+
 /*--- Fin del Formulario ---*/
 
 /*--- Footer ---*/
