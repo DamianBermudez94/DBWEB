@@ -69,22 +69,23 @@ html {
 
 @keyframes mostrarArriba {
   0% {
-    transform: translateY(60px);
+    transform: translateY(80px);
   }
   100% {
     transform: translateY(0);
   }
 }
+
 .animacionIzquierda {
   opacity: 0;
   transition: all 0.5s;
 }
 .mostrarIzquierda {
-  animation: mostrarIzquierda 5s;
+  animation: mostrarIzquierda 1s;
 }
-@keyframes mostrarizquierda {
+@keyframes mostrarIzquierda {
   0% {
-    transform: translateX(-80px);
+    transform: translateX(-120px);
   }
   100% {
     transform: translateX(0);
