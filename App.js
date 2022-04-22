@@ -1,14 +1,14 @@
-"use stric";
-
-window.addEventListener("load", function () {
+function menu() {
   // Animacion del menu
   let btnMenu = document.querySelector("#btn-menu");
-  let menu = document.querySelector(".container");
-  let containerMenu = document.querySelector(".menu");
+  let menu = document.querySelector(".menu");
+
+  let listMenu = document.querySelector(".list");
   let activador = true;
 
   btnMenu.addEventListener("click", function () {
     document.querySelector("#btn-menu i").classList.toggle("fa-times");
+
     if (activador) {
       menu.style.left = "0";
       menu.style.transition = "0.6s";
@@ -20,43 +20,56 @@ window.addEventListener("load", function () {
       activador = true;
     }
   });
-  /*
-    btnMenu.addEventListener("click", function(){
-        document.querySelector("#btn-menu i").classList.toggle("fa-times");
-          if(activador){
-              menu.style.right = "0";
-              menu.style.transition = "0.6s"
-              activador = false;
-          }else{
-              activador = false;
-               menu.style.right = "0";
-              menu.style.transition = "0.6s"
-              activador = true;
-    
-          }
-    
-    
-        });
 
-*/
+  const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
 
-  // Intercalar la clase Active
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
 
-  let enlaces = document.querySelectorAll(".list li a");
+        const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
 
-  enlaces.forEach((element) => {
-    element.addEventListener("click", (event) => {
-      enlaces.forEach((link) => {
-        link.classList.remove("active");
+        if (entry.isIntersecting) {
+          document.querySelector(".menu a.active").classList.remove("active");
+          console.log("soy la entry", entry);
+          menuLink.classList.add("active");
+        }
       });
-      event.target.classList.add("active");
+    },
+    { rootMargin: "-30% 0px -70% 0px" }
+  );
+
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener("click", () => {
+      document.querySelector("#btn-menu i").classList.toggle("fa-times");
+
+      if (activador) {
+        menu.style.left = "0";
+        menu.style.transition = "0.6s";
+        activador = false;
+      } else {
+        activador = false;
+        menu.style.left = "-100%";
+        menu.style.transition = "0.6s";
+        activador = true;
+      }
+
+      //listMenu.classList.remove("menu_opened");
     });
+
+    const hash = menuLink.getAttribute("href");
+
+    const target = document.querySelector(hash);
+    if (target) {
+      observer.observe(target);
+    }
   });
+}
 
-  // Efecto Scroll
-
-  // Variable = prevScrollPos
-
+// Efecto Scroll
+function scrolTop() {
+  let containerMenu = document.querySelector(".menu-container");
   // window = accedemos a toda la ventana del navegador
   //pageYOffset = devuelve el valor en pixeles del scroll
   let goTop = document.querySelector(".go-top");
@@ -68,7 +81,7 @@ window.addEventListener("load", function () {
       containerMenu.style.top = "0";
       containerMenu.style.transition = "0.5s";
     } else {
-      containerMenu.style.top = "-60px";
+      containerMenu.style.top = "-80px";
       containerMenu.style.transition = "0.5s";
     }
 
@@ -102,17 +115,10 @@ window.addEventListener("load", function () {
     document.body.scrollTop = 600;
     document.documentElement.scrollTop = 600;
   });
+}
 
-  // Boton de Mas informacion
-
-  let masInformacion = document.querySelector("#mas-informacion");
-  masInformacion.addEventListener("click", () => {
-    document.body.scrollTop = 3800;
-    document.documentElement.scrollTop = 3800;
-  });
-
-  // Slider-Proyects
-
+// Slider-Proyects
+function slider() {
   const slider = document.querySelector("#slider");
   let sliderSection = document.querySelectorAll(".slider_section");
   let sliderSectionLast = sliderSection[sliderSection.length - 1];
@@ -125,8 +131,8 @@ window.addEventListener("load", function () {
   function nextRight() {
     let sliderSectionFirts = document.querySelectorAll(".slider_section")[0];
 
-    slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0.5s";
+    slider.style.marginLeft = "0";
+    slider.style.transition = "all 0.3s";
     setTimeout(function () {
       slider.style.transition = "none";
       slider.insertAdjacentElement("beforeend", sliderSectionFirts);
@@ -153,81 +159,14 @@ window.addEventListener("load", function () {
     nextRight();
   });
 
-  /*setInterval(function(){
-            nextRight();
-        },5000);*/
+  /*setInterval(function () {
+      nextRight();
+    }, 5000);*/
+}
 
-  // Acerca de
-  /*
-    let acercademi = document.querySelectorAll("#acerca-de");
-    acercademi.addEventListener("click", () =>{
-        document.body.scrollTop =500;
-        document.documentElement.scrollTop = 500;
-
-    })
-    
-    /*acercademi.forEach((element) => {
-        element.addEventListener("click", (event) => {
-            enlaces.forEach((link) =>{
-             link.classList.remove("active");
-            
-            document.body.scrollTop =500;
-            document.documentElement.scrollTop = 500;
-
-            });
-            event.target.classList.add("active");
-            
-        });
-        
-    });*/
-
-  // Proyectos
-  /*
-    let proyectos = document.querySelectorAll(".list li a");
-
-    proyectos.forEach((element) => {
-        element.addEventListener("click", (event) => {
-            enlaces.forEach((link) =>{
-
-             link.classList.remove("active");
-           
-            
-            });
-
-            if(proyectos >= 500){
-                document.body.scrollTop = 500;
-                document.documentElement.scrollTop = 500;
-             }else{
-                document.body.scrollTop =1300;
-                document.documentElement.scrollTop = 1300;
-             }
-            event.target.classList.add("active");
-            
-        });
-        
-    });
-
-    // Contacto
-    /*
-    let contacto = document.querySelectorAll(".list li a");
-    contacto.forEach((element) => {
-        element.addEventListener("click", (event) => {
-            enlaces.forEach((link) =>{
-             link.classList.remove("active");
-             
-
-            });
-            event.target.classList.add("active");
-           
-        });
-        
-    });
-
-    // JQuery
-    /*
-    $('.ancla').on('click', function(e){
-        e.preventDefault();
-        var strAncla = '#' + $(this).data('ancla');
-        $('html,body').animate({scrollTop: $(strAncla).offset().top}, 2000);
-        });*/
-});
+function main() {
+  menu();
+  scrolTop();
+  slider();
+}
+main();

@@ -11,13 +11,6 @@ window.addEventListener("scroll", () => {
       animacion[i].classList.add("mostrarArriba");
     }
   }
-
-  //let tamañoDePantalla = window.innerHeight / 1;
-
-  //if (posicionObj > tamañoDePantalla) {
-  //animacion.style.animation = "mover 2s ease-out";
-  //animacion.style.animation = "moverdos 2s ease-out";
-  //}
 });
 
 window.addEventListener("scroll", () => {
@@ -34,11 +27,4 @@ window.addEventListener("scroll", () => {
       animacionIzquierda[i].classList.add("mostrarIzquierda");
     }
   }
-
-  //let tamañoDePantalla = window.innerHeight / 1;
-
-  //if (posicionObj > tamañoDePantalla) {
-  //animacion.style.animation = "mover 2s ease-out";
-  //animacion.style.animation = "moverdos 2s ease-out";
-  //}
 });

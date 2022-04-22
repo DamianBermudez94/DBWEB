@@ -5,11 +5,15 @@
 }
 body {
   background: #fff;
-  overflow-x: hidden;
+
   font-family: "Roboto", sans-serif;
 }
 html {
   scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 70px;
 }
 /** Go top **/
 .go-top {
@@ -40,7 +44,7 @@ html {
   font-size: 25px;
   color: rgb(255, 85, 85);
 }
-/** Skew abajo - corte de las secciones  **/
+/** Skew abajo - corte de las secciones  
 .skew-abajo {
   position: absolute;
   bottom: 0;
@@ -48,8 +52,10 @@ html {
   border-width: 0 0 10vh 100vw;
   border-style: solid;
   border-color: transparent transparent #fff transparent;
+  overflow: hidden;
 }
 .skew-arriba {
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -57,7 +63,8 @@ html {
   border-style: solid;
   border-color: #fff transparent transparent transparent;
   z-index: 10;
-}
+  overflow: hidden;
+}**/
 /*--- Estilo animacion Scroll ---*/
 .animacion {
   opacity: 0;
@@ -94,62 +101,72 @@ html {
 /*---- Menu de navegacion -----*/
 
 /*Estilo del header*/
-#header {
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+.header {
   position: relative;
+  width: 100%;
 }
 /*estilo del menu*/
 
-.menu {
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
   background: rgba(83, 83, 83, 0.9);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 25px;
   z-index: 9999;
 }
-
-.menu .logo-box {
-  margin-left: 25px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-}
-.menu .logo-box h1 a {
+.tittle-web a {
+  width: 50%;
   text-decoration: none;
-  font-size: 22px;
   font-weight: 400;
   letter-spacing: 4px;
   color: rgb(255, 136, 136);
+  font-size: 25px;
 }
 
-.menu .container {
-  margin-right: 20px;
+.logo-box {
+  width: 40%;
+  padding: 10px;
+  max-width: 400px;
+  font-family: "Raleway", sans-serif;
 }
 
-.menu .container .list {
+.menu .list {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin: auto;
 }
-.menu .container .list li {
+.menu .list li {
+  margin: auto;
   list-style: none;
 }
-.menu .container .list li a {
+.menu .list li a {
   text-decoration: none;
-  margin: 0 10px;
-  padding: 8px;
-  color: #000;
+  margin: 0 auto;
+  padding: 12px;
+  color: rgb(255, 255, 255);
   border-radius: 24px;
   font-size: 16px;
   transition: 0.3s;
 }
 
-.menu .container .list li a.active {
+.menu .list li a.active {
   color: rgb(255, 136, 136);
 }
-.menu .container .list li a:hover {
-  color: rgb(245, 136, 136);
+.menu .list li a:hover {
+  color: rgb(255, 136, 136);
 }
 
 #btn-menu > .fa-bars {
@@ -168,6 +185,7 @@ html {
   background-position: center;
   background-attachment: fixed;
   margin: auto;
+  overflow: hidden;
 }
 
 .header-img .welcome {
@@ -176,11 +194,12 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 .header-img .welcome h1 {
   font-size: 50px;
@@ -188,9 +207,8 @@ html {
   font-weight: 200;
   font-family: "Raleway", sans-serif;
   text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: show 2s forwards, move 1s 2s forwards;
-  transform: translate(50%);
+
+  overflow: hidden;
 }
 
 .header-img .welcome hr {
@@ -199,28 +217,15 @@ html {
   background: #fff;
   border: none;
   margin-top: 5px;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: show 2s forwards, move 1s 2s forwards;
-  transform: translate(50%);
+
+  overflow: hidden;
 }
 .header-img .welcome p {
   font-size: 20px;
   color: #fff;
   margin-top: 20px;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: show 2s forwards, move 1s 2s forwards;
-  transform: translate(50%);
-}
 
-@keyframes move {
-  to {
-    transform: translate(0);
-  }
-}
-@keyframes show {
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
+  overflow: hidden;
 }
 
 .header-img .welcome > button {
@@ -231,9 +236,6 @@ html {
   border: none;
   outline: none;
   cursor: pointer;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: show 2s forwards, move 1s 2s forwards;
-  transform: translate(50%);
 }
 
 button:hover {
@@ -248,42 +250,24 @@ button:hover {
   font-size: 80px;
 }
 
-/*.header-img .welcome > button{
-    position: relative;
-    top: 170px;
-    left: 0;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: 400ms;
-    
-}
-button:hover{
-   
-    background: transparent;
-}
-.header-img .welcome > button i{
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-}
-
 /** Fin del IMG Header **/
 
 /*--- Acerca de nosotros---*/
 
 .acerca-de {
   width: 100%;
-  margin-top: 120px;
 }
 
 .acerca-de .info-containar {
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  padding: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
+.icon-title {
+  font-size: 45px;
+}
 .acerca-de .info-containar h1 {
   font-size: 50px;
   font-weight: 400;
@@ -313,13 +297,11 @@ button:hover{
 }
 
 .acerca-de .info-containar .info-estudios .tecnologias {
-  width: 50%;
+  width:100%;
   height: 100%;
   margin: 10px 25px;
   border: 1px solid #000;
   border-radius: 10px;
-  cursor: pointer;
-
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 .acerca-de .info-containar .info-estudios .tecnologias .fa-code {
@@ -328,12 +310,8 @@ button:hover{
 .acerca-de .info-containar .info-estudios .tecnologias p {
   font-size: 18px;
   font-weight: 300;
-  transition: all 0.5s;
 }
-.acerca-de .info-containar .info-estudios .tecnologias p:hover {
-  font-size: 24px;
-  font-weight: 300;
-}
+
 .acerca-de .info-containar .info-estudios .tecnologias .title {
   font-size: 25px;
   margin: auto;
@@ -345,12 +323,11 @@ button:hover{
 }
 
 .acerca-de .info-containar .info-estudios .estudios {
-  width: 50%;
+  width: 100%;
   height: 100%;
   margin: 10px 50px;
   border: 1px solid #000;
   border-radius: 10px;
-  cursor: pointer;
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 .acerca-de .info-containar .info-estudios .estudios .title {
@@ -361,36 +338,19 @@ button:hover{
 .acerca-de .info-containar .info-estudios .estudios p {
   font-size: 18px;
 }
+.acerca-de .info-containar .info-estudios .estudios a {
+  text-decoration: none;
+  color: #000;
+  transition:all 1s;
+  font-size: 22px;
+  font-weight: bold;
 
-.acerca-de .info-containar .info-estudios .estudios i {
-  font-size: 50px;
 }
+.acerca-de .info-containar .info-estudios .estudios a:hover {
+  text-decoration: none;
+  color: #ff0000;
 
-.acerca-de .info-containar .leer-mas {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
-.acerca-de .info-containar .leer-mas button {
-  width: 150px;
-  height: 50px;
-  background: rgb(255, 80, 80);
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 17px;
-  color: #fff;
-  cursor: pointer;
-  margin-top: 20px;
-  text-align: center;
-  transition: 0.5s;
-}
-
-.acerca-de .info-containar .leer-mas button:hover {
-  background: rgba(5, 5, 5, 0.8);
-}
-
 /*--- Fin del  Acerca de nosotros ----*/
 
 /**----- Mis Proyectos -----**/
@@ -420,7 +380,7 @@ button:hover{
 }
 
 .proyects .containar-proyects {
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding-top: 100px;
 }
@@ -442,21 +402,15 @@ button:hover{
   margin: 10px auto;
 }
 
-.proyects .containar-proyects .containar-slider {
-  width: 90%;
-  height: 100%;
-  overflow: hidden;
-  max-width: 900px;
-
-  position: absolute;
-  top: 100px;
+.container-slider {
+  width: 100%;
 }
 .proyects .containar-proyects .slider {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 700%;
-  height: 800px;
+  width: 200%;
+  height: 500px;
   margin-left: -100%;
 }
 /*
@@ -466,18 +420,12 @@ button:hover{
     height: 100%;
     margin-left: -100%;
 }*/
-.proyects .containar-proyects .slider_section {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .proyects .containar-proyects .slider_img {
   display: flex;
-  width: 700px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
+  margin: 0 20px;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid rgb(255, 80, 80);
@@ -489,10 +437,10 @@ button:hover{
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 60%;
+  top: 90%;
   /*transform: translateY(-50%);*/
   font-size: 35px;
-  font-weight: blod;
+
   text-align: center;
   cursor: pointer;
 }
@@ -501,10 +449,10 @@ button:hover{
   color: rgb(255, 80, 80);
 }
 .proyects .containar-proyects .slider_btn-right {
-  right: 50px;
+  right: 250px;
 }
 .proyects .containar-proyects .slider_btn-left {
-  left: 50px;
+  left: 250px;
 }
 
 /*.proyects .containar-proyects .slider img{
@@ -520,6 +468,7 @@ button:hover{
 /** ---- Mis Servicios ----**/
 
 .mis-servicios {
+  padding: 25px;
   width: 100%;
 }
 
@@ -550,9 +499,6 @@ button:hover{
   display: flex;
   justify-content: center;
   padding: 15px;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: show 2s forwards, move 1s 2s forwards;
-  transform: translate(50%);
 }
 
 .mis-servicios .box-servicios .card-servicios {
@@ -574,7 +520,7 @@ button:hover{
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  cursor: pointer;
+
   text-align: center;
   padding: 40px;
 }
@@ -615,10 +561,7 @@ button:hover{
 
 /**----- Fin de comentarios ----**/
 
-/**---- Footer ----**/
-
 .formulario-contacto {
-  position: relative;
   width: 100%;
   height: 100%;
   background: url("Imagenes/11.jpg");
@@ -629,16 +572,14 @@ button:hover{
 
 .formulario-contacto .ejeZform {
   position: relative;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
 }
 
 .formulario-contacto .form-content {
-  width: 90%;
+  width: 100%;
   padding-top: 100px;
   margin: auto;
   padding-bottom: 70px;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .formulario-content {
@@ -704,34 +645,48 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.formulario-contacto .formulario-content #formulario .btn-enviar {
-  margin: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.formulario-contacto .form-content .formulario-content #formulario .btn-enviar {
-  width: 150px;
-  height: 50px;
-
-  background: rgb(255, 80, 80);
-  border-radius: 15px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  color: #fff;
-
+.btn-enviar{
+  display: inline-block;
+  font-size: 24px;
   cursor: pointer;
-  transition: 0.5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  outline: 2px solid rgb(255, 0, 0);
+  border: none;
+  border-radius: 8px;
+  padding: 20px 50px;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s;
 }
 
-.formulario-contacto
-  .form-content
-  .formulario-content
-  #formulario
-  .btn-enviar:hover {
-  background: rgba(82, 82, 82, 0.8);
-  color: rgb(255, 80, 80);
+.btn-enviar:hover{
+  color: #000000;
+  z-index: 1;
+}
+
+.btn-enviar::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 150%;
+  height: 100%;
+  background-color: #ff0000;
+  border: none;
+  outline: 3px solid rgb(0, 0, 0);
+  transform: scaleX(0) skewX(35deg);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 1s;
+}
+
+.btn-enviar:hover::before{
+  
+  transform: scaleX(1) skewX(35deg);
 }
 .formulario-contacto .formulario-content #formulario .mensaje-form {
   width: 100%;
@@ -751,28 +706,31 @@ button:hover{
 .footer {
   background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
-  height: 100%;
+  
 }
 .contenedor-informacion {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content:flex-end;
   align-items: center;
+  margin: 20px 0;
+  
 }
 .title-copy {
   align-items: center;
-  font-size: 17px;
+  font-size: 22px;
   margin: 15px;
   font-weight: 300;
 }
 
 .redes-sociales i {
-  font-size: 22px;
+  font-size: 26px;
   padding: 5px;
   color: #000;
 }
 
 .contacto .correo-electronico {
-  font-size: 16px;
+  font-size: 22px;
   margin-right: 10px;
   text-decoration: none;
   color: #000;
@@ -781,59 +739,54 @@ button:hover{
 
 /** Responsive **/
 
-@media screen and (max-width: 370px) {
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(83, 83, 83, 0.9);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
-    margin: auto;
-  }
+@media screen and (max-width: 850px) {
+  .menu-container {
+    
+    padding: 10px;
+    
+  } 
   .tittle-web {
-    position: absolute;
-    display: block;
-    text-align: center;
-    font-size: 22px;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
   }
   #btn-menu > .fa-bars {
-    display: block;
+    display: inline-block;
+    margin: 15px 0;
+    padding: 0;
     font-size: 28px;
-    margin: auto 285px;
   }
-  .menu .container {
-    position: absolute;
-    top: 60px;
+  .menu {
+    position: fixed;
+    top: 75px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 60px);
     background: #fff;
   }
 
-  .menu .container .list {
+  .menu .list {
     margin: auto;
     flex-direction: column;
     border-top: 5px solid rgb(255, 1, 1);
   }
 
-  .menu .container .list li {
+  .menu .list li {
     width: 100%;
     margin: 10px auto;
     border-bottom: 1px solid rgb(255, 1, 1);
   }
-
-  .menu .container .list li a.active {
+  .menu .list li a {
     background: none;
     color: rgb(255, 1, 1);
   }
-  .menu .container .list li a.active:hover {
+  .menu .list li a.active {
     background: none;
-    color: rgb(255, 1, 1);
+    color: rgb(0, 0, 0);
+  }
+  .menu .list li a.active:hover {
+    background: none;
+    color: rgb(0, 0, 0);
   }
   .title-welcome {
     margin: 10px;
@@ -884,7 +837,11 @@ button:hover{
     text-align: center;
   }
   .contenedor-informacion {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+
   }
   .contacto {
     margin: auto;

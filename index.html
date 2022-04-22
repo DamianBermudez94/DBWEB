@@ -19,29 +19,26 @@
 <body>
     <!--Ir arriba-->
     <div class="go-top">
-        <span><i class="fas fa-chevron-up"></i> <!--<a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>--></span>
+        <span><i class="fas fa-chevron-up"></i> </span>
     </div>
     
     <!-- Menu de navegacion -->
-    <header id="header">
-       
-        <nav class="menu">
-            <div class="logo-box">
-                <h1 class="tittle-web"><a href="index.html">DB|WEB-Design</a></h1>
-                <span id="btn-menu"><i class="fas fa-bars"></i></span>
-            </div>
-            <div class="container">
+    <header id="inicio" class="header">
+        <nav class="menu-container">
+            <h1 class="tittle-web"><a href="index.html">DB|WEB-Design</a></h1>
+            <span id="btn-menu"><i class="fas fa-bars"></i></span>
+            <div class="menu">
                 <ul class="list">
-                    <li ><a href="index.html"  class="active">Inicio</a></li>
+                    <li ><a href="#inicio"  class="active">Inicio</a></li>
                     <li ><a href="#acerca-de">Acerca de</a></li>
                     <li><a href="#proyectos">Mis proyectos</a></li>
-                    <li ><a href="#contacto">Contacto</a></li>
                     <li><a href="#servicios">Servicios</a></li>
+                    <li ><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     <!-- IMG Header -->
-    <div class="header-img">
+    <div class="header-img container">
         <div class="welcome">
             <h1 class="title-welcome">Bienvenidos a DB|WEB-Design</h1>
             <hr class="linea">
@@ -55,9 +52,9 @@
 
     <!--Acerca de nosotros-->
     <main>
-        <section class="acerca-de">
-            <a name="acerca-de"/>
-            <div class="info-containar animacion">
+        <section class="acerca-de" id="acerca-de">
+            
+            <div class="info-containar animacion container">
                 <h1>Sobre mi</h1>
                 <p>Soy Damian Bermudez estudiante de diseño, desarrollo y programacion web Full Stack, soy una persona muy autodidacta, proactivo y en plena evolucion.
 
@@ -66,7 +63,7 @@
                 
                 <div class="info-estudios" >
                     <div class="tecnologias">
-                      <p><i class="fas fa-code"></i></p>
+                      <p><i class="fas fa-code icon-title"></i></p>
                       <hr>
                       <h3 class="title">Tecnologias que manejo</h3>
                       <hr>
@@ -77,9 +74,14 @@
                       <p><i class="fab fa-js tecnologias-icon"></i>Java Script</p>
                       <hr>
                       <p><i class="fab fa-github-square tecnologias-icon"></i>Git Hub</p>
+                      <hr>
+                      <p><i class="fab fa-node tecnologias-icon"></i>NodeJs</p>
+                     
+                      <hr>
+                      <p><i class="fab fa-npm tecnologias-icon"></i></i>Npm</p>
                     </div>
                     <div class="estudios">
-                      <p><i class="far fa-bookmark"></i></p>
+                      <p><i class="far fa-bookmark icon-title"></i></p>
                       <hr>
                       <h3 class="title">Mi formacion como estudiante</h3>
                       <hr>
@@ -87,30 +89,28 @@
                       <hr>
                        <p>Formacion autodidacta</p>
                        <hr>
-                      <p>Curso de Js en udemy</p>
+                      <p>Curso de JS en udemy</p>
+                      <hr>
+                      <p>Actualmente estudiando en <a href="https://apx.school/">APX</a></p>
+                    </div>
+              
+                </div>
 
-                     </div>
-                <!--<img src="Imagenes/1 (4).jpg" alt="">
-                <img src="Imagenes/1 (5).jpg" alt="">
-                <img src="Imagenes/1 (6).jpg" alt="">
-                <img src="Imagenes/1(10).jpg" alt="">-->
-            </div>
-
-            <div class="leer-mas" id="mas-informacion"><button>Mas informacion</button></div>        
+             
 
             </div>
     
         </section>
 
         <!--Nuestros proyectos-->
-        <section class="proyects">
-            <a name="proyectos"/>
+        <section class="proyects" id="proyectos">
+            
             <div class="skew-arriba"></div>
 
             <div class="dreg-background"></div>
 
             <div class="ejezproyects">
-                <div class="containar-proyects">
+                <div class="containar-proyects container">
                     <div class="proyects-title">
                         <h2>Mis Proyectos</h2>
                         <hr>
@@ -165,44 +165,44 @@
         </section>
 
         <!-- Coemntarios acerca de mi-->  
-        <section class="mis-servicios animacionIzquierda">
-            <a name="servicios"/>
+        <section class="mis-servicios animacionIzquierda" id="servicios">
+          
             <div class="servicios-title">
                 <h2 class="title-servicios">Mis servicios</h2>
                 <hr>
             </div>
 
-            <div class="box-servicios">
+            <div class="box-servicios container">
 
                 <div class="card-servicios">
                     <div class="card-img"><i class="fas fa-desktop"></i></div>
                     <div class="servicios-text">
                         <h4>Web Design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex libero nisi cupiditate quos nesciunt reiciendis quas, autem asperiores cum earum officiis aperiam quae voluptate vero fugiat saepe sunt eaque.</p>
+                        <p>El diseño web es una actividad que consiste en la planificación, diseño, implementación y mantenimiento de sitios web</p>
                     </div>
                 </div>
                 <div class="card-servicios">
                     <div class="card-img"><i class="fas fa-mobile-alt"></i></div>
                     <div class="servicios-text">
                         <h4>Responsive web design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolorum deserunt autem totam dolor quaerat illum, vero unde.</p>
+                        <p>Sitios modernos adaptados a diferentes pantallas </p>
                     </div>
                 </div>
                 <div class="card-servicios">
                     <div class="card-img"><i class="fas fa-desktop"></i></div>
                     <div class="servicios-text">
                         <h4>Web Site</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, maiores nisi at vel consectetur expedita beatae labore, vero corrupti distinctio consequatur porro, possimus molestiae sed voluptatum perferendis assumenda natus voluptatem..</p>
+                        <p>Sitios web con el mejor diseño, con la mejor experiencia para el ususrio y modernos.</p>
                     </div>
                 </div>
               
 
             </div>
         </section>
-        <section class="formulario-contacto">
-            <a name="contacto"/>
+        <section class="formulario-contacto" id="contacto" >
+        
             <div class="skew-arriba"></div>
-            <div class="ejeZform">
+            <div class="ejeZform"></div>
          
                 <div class="form-content">
                     <div class="form-title">
@@ -227,7 +227,7 @@
                            
                             <textarea name="mensaje" id="mensaje" placeholder="Deje su mensaje......"></textarea>
     
-                          <input class="btn-enviar" type="submit" value="ENVIAR" id="boton">
+                          <button class="btn-enviar" type="submit" value="ENVIAR" id="boton">Enviar</button>
     
                             <div class="mensaje-form">
                                 <p>No dudes en consultarme, te estare respondiendo a la brevedad</p>
@@ -244,7 +244,7 @@
     <!--Footer-->
     <footer class="footer">
         
-                <div class="contenedor-informacion">
+                <div class="contenedor-informacion container">
                     <div class="redes-sociales">
                         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -252,16 +252,15 @@
                         <a href="https:/www.github.com" target="_blank"><i class="fab fa-github-square"></i></a>
                     </div>
 
-                        <div class="footer-text">
-                            <p class="title-copy">&copy; DB|WEB - 2021 | Todos los derechos reservados</p>
-                        </div>
+                    <div class="footer-text">
+                        <p class="title-copy">&copy; DB|WEB - 2021 | Todos los derechos reservados</p>
+                    </div>
                      
-                        <div class="contacto">
-                            <a href="https://www.gmail.com" target="_blank" class="correo-electronico"><i class="far fa-envelope"></i>bermudedamian7@gmail.com</a>
-                        </div>
-                 </div>
-            </div>
-        </div>
+                    <div class="contacto">
+                        <a href="https://www.gmail.com" target="_blank" class="correo-electronico"><i class="far fa-envelope"></i>bermudedamian7@gmail.com</a>
+                    </div>
+                </div>
+       
 
 
     </footer>
