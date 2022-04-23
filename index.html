@@ -91,6 +91,7 @@
                     </div>
                 </div>
             </div>
+            <a class="btn-cv" href="./archivo-pdf/Damián+Bermúdez.pdf" download="CV.pdf">Descargar CV</a>
         </section>
 
         <!--Nuestros proyectos-->
@@ -133,14 +134,11 @@
 
         <!-- Coemntarios acerca de mi-->  
         <section class="mis-servicios animacionIzquierda" id="servicios">
-          
             <div class="servicios-title">
                 <h2 class="title-servicios">Mis servicios</h2>
                 <hr>
             </div>
-
             <div class="box-servicios container">
-
                 <div class="card-servicios">
                     <div class="card-img"><i class="fas fa-desktop"></i></div>
                     <div class="servicios-text">
@@ -162,74 +160,45 @@
                         <p>Sitios web con el mejor diseño, con la mejor experiencia para el ususrio y modernos.</p>
                     </div>
                 </div>
-              
-
             </div>
         </section>
         <section class="formulario-contacto" id="contacto" >
-        
             <div class="skew-arriba"></div>
             <div class="ejeZform"></div>
-         
                 <div class="form-content">
                     <div class="form-title">
                         <h2>Contactate conmigo</h2>
                         <hr>
                     </div>
                     <div class="formulario-content">
-    
-                        <form id="formulario" action="correo.php" method="POST">
-                            
+                        <form id="formulario">
                             <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre...">
-    
-                            
-    
-                            
                             <input type="tel"  id="telefono" name="telefono" placeholder="Escriba su numero de telefono...">
-    
-                            
                             <input type="email" id="email" name="correo" placeholder="Escriba su email...">
-    
-    
-                           
                             <textarea name="mensaje" id="mensaje" placeholder="Deje su mensaje......"></textarea>
-    
-                          <button class="btn-enviar" type="submit" value="ENVIAR" id="boton">Enviar</button>
-    
+                            <button type="submit" class="btn-enviar mostrarArriba">Enviar mensaje</button>
                             <div class="mensaje-form">
                                 <p>No dudes en consultarme, te estare respondiendo a la brevedad</p>
                             </div>
+                            <a class="btn-enviar" href="mailto:bermudezdamian7@gmail.com" target="_blank"  id="enviar-mail">Enviar</a>
                         </form>
-    
                     </div>
                 </div>
-
         </section>
-
-
     </main>
     <!--Footer-->
     <footer class="footer">
-        
-                <div class="contenedor-informacion container">
-                    <div class="redes-sociales">
-                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https:/www.github.com" target="_blank"><i class="fab fa-github-square"></i></a>
-                    </div>
-
-                    <div class="footer-text">
-                        <p class="title-copy">&copy; DB|WEB - 2021 | Todos los derechos reservados</p>
-                    </div>
-                     
-                    <div class="contacto">
-                        <a href="https://www.gmail.com" target="_blank" class="correo-electronico"><i class="far fa-envelope"></i>bermudedamian7@gmail.com</a>
-                    </div>
-                </div>
-       
-
-
+        <div class="contenedor-footer container">
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https:/www.github.com" target="_blank"><i class="fab fa-github-square"></i></a>
+            </div>
+            <div class="footer-text">
+                <p class="title-copy">&copy; DB|WEB - 2021 | Todos los derechos reservados</p>
+            </div>
+        </div>
     </footer>
     <script async src="./animaciones-scroll/animacion.js"></script>
     <script async src="App.js"></script>
