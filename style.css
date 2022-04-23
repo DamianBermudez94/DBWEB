@@ -180,7 +180,7 @@ section[id] {
 .header-img {
   height: 100vh;
   width: 100%;
-  background: url("Imagenes/banner-jpg.jpg");
+  background: url("Img-proyectos/banner-jpg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -286,8 +286,8 @@ button:hover {
 .acerca-de .info-containar .info-estudios {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 50px 0;
+  align-items: center;
+  flex-direction: column;
 }
 .acerca-de .info-containar .info-estudios hr {
   width: 80%;
@@ -297,15 +297,23 @@ button:hover {
 }
 
 .acerca-de .info-containar .info-estudios .tecnologias {
-  width:100%;
+  width:800px;
   height: 100%;
-  margin: 10px 25px;
   border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin:10px;
 }
-.acerca-de .info-containar .info-estudios .tecnologias .fa-code {
-  font-size: 50px;
+.container-skills{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+.acerca-de .info-containar .info-estudios .tecnologias .img-skills {
+  width: 100px;
+  height: 100px;
+ 
 }
 .acerca-de .info-containar .info-estudios .tecnologias p {
   font-size: 18px;
@@ -323,9 +331,8 @@ button:hover {
 }
 
 .acerca-de .info-containar .info-estudios .estudios {
-  width: 100%;
+  width: 800px;
   height: 100%;
-  margin: 10px 50px;
   border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -358,7 +365,7 @@ button:hover {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("Imagenes/alexandru-acea--WBYxmW4yuw-unsplash.jpg");
+  background: url("Img-proyectos/alexandru-acea--WBYxmW4yuw-unsplash.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -401,30 +408,31 @@ button:hover {
   width: 50%;
   margin: 10px auto;
 }
-
+.slider_section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .container-slider {
   width: 100%;
+  
 }
 .proyects .containar-proyects .slider {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 200%;
+  width: 400%;
   height: 500px;
   margin-left: -100%;
 }
-/*
-.slider{
-    display: flex;
-    width: 700%;
-    height: 100%;
-    margin-left: -100%;
-}*/
+
 
 .proyects .containar-proyects .slider_img {
   display: flex;
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 350px;
   margin: 0 20px;
   object-fit: cover;
   cursor: pointer;
@@ -432,36 +440,77 @@ button:hover {
   border-radius: 5px;
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
 }
+.proyects .containar-proyects .proyects-link{
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  outline: 2px solid rgb(255, 0, 0);
+  border: none;
+  border-radius: 8px;
+  padding: 20px 50px;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s;
+
+}
+.proyects .containar-proyects .proyects-link:hover{
+  color: #000000;
+  z-index: 1;
+}
+
+.proyects .containar-proyects .proyects-link::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 150%;
+  height: 100%;
+  background-color: #ff0000;
+  border: none;
+  outline: 3px solid rgb(0, 0, 0);
+  transform: scaleX(0) skewX(35deg);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 1s;
+}
+
+.proyects .containar-proyects .proyects-link:hover::before{
+
+  transform: scaleX(1) skewX(35deg);
+}
 
 .proyects .containar-proyects .btn-slider {
+  width: 100px;
+  height: 400px;
   position: absolute;
-  width: 40px;
-  height: 40px;
   top: 90%;
-  /*transform: translateY(-50%);*/
+  transform: translateY(-50%);
   font-size: 35px;
-
   text-align: center;
   cursor: pointer;
+
 }
 
 .btn-slider:hover {
   color: rgb(255, 80, 80);
 }
 .proyects .containar-proyects .slider_btn-right {
-  right: 250px;
+  right: 0px;
 }
 .proyects .containar-proyects .slider_btn-left {
-  left: 250px;
+  left: 0px;
+
 }
 
-/*.proyects .containar-proyects .slider img{
-    /*width: calc(29% - 10px);
-    margin: 5px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-}*/
 
 /**----- Fin del Mis Proyectos -----**/
 
@@ -564,7 +613,7 @@ button:hover {
 .formulario-contacto {
   width: 100%;
   height: 100%;
-  background: url("Imagenes/11.jpg");
+  background: url("Img-proyectos/11.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -740,10 +789,8 @@ button:hover {
 /** Responsive **/
 
 @media screen and (max-width: 850px) {
-  .menu-container {
-    
+  .menu-container { 
     padding: 10px;
-    
   } 
   .tittle-web {
     font-size: 18px;
@@ -764,7 +811,6 @@ button:hover {
     height: calc(100vh - 60px);
     background: #fff;
   }
-
   .menu .list {
     margin: auto;
     flex-direction: column;
@@ -803,18 +849,13 @@ button:hover {
   .parrafo-welcome {
     font-size: 19px;
   }
-
-  .info-estudios {
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
+  .acerca-de .info-containar .info-estudios .tecnologias{
+    width: 100%;
   }
-  .tecnologias {
-    min-width: 350px;
+  .acerca-de .info-containar .info-estudios .estudios{
+    width: 100%;
   }
-  .estudios {
-    min-width: 350px;
-  }
+ 
   .slider_img {
     max-width: 280px;
     height: 250px;

@@ -122,6 +122,7 @@ function slider() {
   const slider = document.querySelector("#slider");
   let sliderSection = document.querySelectorAll(".slider_section");
   let sliderSectionLast = sliderSection[sliderSection.length - 1];
+  console.log("Holis", sliderSection);
 
   const btnRight = document.querySelector("#btn-right");
   const btnLeft = document.querySelector("#btn-left");
@@ -130,7 +131,6 @@ function slider() {
 
   function nextRight() {
     let sliderSectionFirts = document.querySelectorAll(".slider_section")[0];
-
     slider.style.marginLeft = "0";
     slider.style.transition = "all 0.3s";
     setTimeout(function () {
@@ -141,7 +141,8 @@ function slider() {
   }
   function Prev() {
     let sliderSection = document.querySelectorAll(".slider_section");
-    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    let sliderSectionLast = sliderSection[sliderSection.length - 2];
+    console.log("Soy la img", sliderSectionLast);
     slider.style.marginLeft = "0";
     slider.style.transition = "all 0.5s";
 
