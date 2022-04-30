@@ -44,27 +44,7 @@ section[id] {
   font-size: 25px;
   color: rgb(255, 85, 85);
 }
-/** Skew abajo - corte de las secciones  
-.skew-abajo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-width: 0 0 10vh 100vw;
-  border-style: solid;
-  border-color: transparent transparent #fff transparent;
-  overflow: hidden;
-}
-.skew-arriba {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-width: 10vh 100vw 0 0;
-  border-style: solid;
-  border-color: #fff transparent transparent transparent;
-  z-index: 10;
-  overflow: hidden;
-}**/
+
 /*--- Estilo animacion Scroll ---*/
 .animacion {
   opacity: 0;

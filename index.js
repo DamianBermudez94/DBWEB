@@ -159,10 +159,6 @@ function slider() {
   btnRight.addEventListener("click", function () {
     nextRight();
   });
-
-  /*setInterval(function () {
-      nextRight();
-    }, 5000);*/
 }
 function enviarFormulario() {
   const $form = document.querySelector("#formulario");
