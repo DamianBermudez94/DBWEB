@@ -120,7 +120,7 @@ function scrolTop() {
 // Slider-Proyects
 function slider() {
   const slider = document.querySelector("#slider");
-  let sliderSection = document.querySelectorAll(".slider_section");
+  let sliderSection = document.querySelectorAll(".slider-section");
   let sliderSectionLast = sliderSection[sliderSection.length - 1];
   console.log("Holis", sliderSection);
 
@@ -130,7 +130,7 @@ function slider() {
   slider.insertAdjacentElement("afterbegin", sliderSectionLast);
 
   function nextRight() {
-    let sliderSectionFirts = document.querySelectorAll(".slider_section")[0];
+    let sliderSectionFirts = document.querySelectorAll(".slider-section")[0];
     slider.style.marginLeft = "0";
     slider.style.transition = "all 0.3s";
     setTimeout(function () {
@@ -140,7 +140,7 @@ function slider() {
     }, 500);
   }
   function Prev() {
-    let sliderSection = document.querySelectorAll(".slider_section");
+    let sliderSection = document.querySelectorAll(".slider-section");
     let sliderSectionLast = sliderSection[sliderSection.length - 2];
     console.log("Soy la img", sliderSectionLast);
     slider.style.marginLeft = "0";

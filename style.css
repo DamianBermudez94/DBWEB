@@ -207,7 +207,6 @@ section[id] {
   font-weight: 200;
   font-family: "Raleway", sans-serif;
   text-align: center;
-
   overflow: hidden;
 }
 
@@ -217,14 +216,12 @@ section[id] {
   background: #fff;
   border: none;
   margin-top: 5px;
-
   overflow: hidden;
 }
 .header-img .welcome p {
   font-size: 20px;
   color: #fff;
   margin-top: 20px;
-
   overflow: hidden;
 }
 
@@ -238,16 +235,17 @@ section[id] {
   cursor: pointer;
 }
 
-button:hover {
-  background: transparent;
-}
+
 .header-img .welcome > button i {
-  font-size: 50px;
-  color: rgb(0, 0, 0);
+  font-size: 45px;
+  color: rgb(252, 136, 136);
   transition: all 0.5s;
 }
 .header-img .welcome > button i:hover {
-  font-size: 80px;
+  color: #000000;
+  background-color: rgba(252, 136, 136, 0.5);
+  border-radius: 50%;
+  padding: 10px;
 }
 
 /** Fin del IMG Header **/
@@ -304,13 +302,16 @@ button:hover {
   box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.3);
   margin:10px;
 }
-.container-skills{
+.container-skills ul{
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
   gap: 20px;
   padding: 10px;
+}
+.container-skills li{
+  list-style: none;
 }
 .acerca-de .info-containar .info-estudios .tecnologias .img-skills {
   width: 100px;
@@ -393,7 +394,7 @@ button:hover {
   width: 100%;
   height: 800px;
   margin: auto;
-  padding-top: 100px;
+  padding:30px;
 }
 .proyects .containar-proyects .proyects-title {
   padding: 10px;
@@ -412,20 +413,25 @@ button:hover {
   width: 50%;
   margin: 10px auto;
 }
-.slider_section{
+.slider-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.container-slider{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.container-slider {
-  width: 100%;
-  
-}
+
 .proyects .containar-proyects .slider {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 400%;
   height: 500px;
@@ -434,22 +440,20 @@ button:hover {
 
 
 .proyects .containar-proyects .slider_img {
-  display: flex;
   width: 600px;
   height: 350px;
   margin: 0 20px;
   object-fit: cover;
-  cursor: pointer;
-  border: 2px solid rgb(255, 80, 80);
+  border: none;
   border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 5px 4px 5px 0 rgba(255, 255, 255, 0.5);
 }
 .proyects .containar-proyects .proyects-link{
   text-decoration: none;
   text-align: center;
   color: #fff;
-  font-size: 25px;
-  margin: 10px;
+  font-size: 22px;
+  margin: 5px;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -460,7 +464,7 @@ button:hover {
   outline: 2px solid rgb(255, 0, 0);
   border: none;
   border-radius: 8px;
-  padding: 20px 50px;
+  padding: 10px 20px;
   position: relative;
   overflow: hidden;
   transition: color 1s;
@@ -478,9 +482,9 @@ button:hover {
   left: -50px;
   width: 150%;
   height: 100%;
-  background-color: #ff0000;
+  background-color: rgba(255, 85, 85,0.5);
   border: none;
-  outline: 3px solid rgb(0, 0, 0);
+  outline: 2px solid rgb(0, 0, 0);
   transform: scaleX(0) skewX(35deg);
   transform-origin: left;
   z-index: -1;
@@ -488,19 +492,27 @@ button:hover {
 }
 
 .proyects .containar-proyects .proyects-link:hover::before{
-
   transform: scaleX(1) skewX(35deg);
 }
+.proyects .containar-proyects .container-button{
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+ 
+}
 
-.proyects .containar-proyects .btn-slider {
-  width: 100px;
-  height: 400px;
+.proyects .containar-proyects .container-button_slider .btn-slider {
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 90%;
+  top:63%;
   transform: translateY(-50%);
   font-size: 35px;
   text-align: center;
   cursor: pointer;
+  background-color: rgba(255, 85, 85,0.5);
+  border-radius: 50%;
+  padding: 0px 10px;
 
 }
 
@@ -508,13 +520,119 @@ button:hover {
   color: rgb(255, 80, 80);
 }
 .proyects .containar-proyects .slider_btn-right {
-  right: 0px;
+  
+  right: 300px;
 }
 .proyects .containar-proyects .slider_btn-left {
-  left: 0px;
+  
+  left: 300px;
 
 }
+/*--Reponsive proyectos--*/
+@media screen and (min-width: 1109px) {
+  
+  .proyects .containar-proyects .slider_btn-right {
+  
+    right: 550px;
+  }
+  .proyects .containar-proyects .slider_btn-left {
+    
+    left: 550px;
+  
+  }
+}
+@media screen and (max-width: 850px){
+  
+  .proyects .containar-proyects{
+    display: flex;
+    flex-direction: column;
+    justify-items:flex-end;
+    padding-top: 40px;
+  }
+  .proyects .containar-proyects .proyects-title {
+    margin: 30px 0px;
+  }
+  .slider_section{
+    margin: 30px 0px;
 
+  }
+  .proyects .containar-proyects .slider_img {
+    width: 350px;
+   
+  }
+  .proyects .containar-proyects .container-button_slider .btn-slider{
+    width: 40px;
+    height: 40px;
+    top:73%;
+    background-color: rgba(255, 85, 85,0.5);
+    border-radius: 50%;
+    padding: 0px 10px;
+  }
+  .proyects .containar-proyects .slider_btn-right {
+  
+    right: 240px;
+  }
+  .proyects .containar-proyects .slider_btn-left {
+    
+    left: 240px;
+  
+  }
+}
+@media screen and (max-width:630px) {
+  .slider-section{
+    height: 600px;
+    margin-top: 50px;
+  }
+  .proyects .containar-proyects .container-button_slider .btn-slider{
+    width: 40px;
+    height: 40px;
+    top:64%;
+    background-color: rgba(255, 85, 85,0.5);
+    border-radius: 50%;
+    padding: 0px 10px;
+  }
+  .proyects .containar-proyects .slider_btn-right {
+  
+    right: 170px;
+  }
+  .proyects .containar-proyects .slider_btn-left {
+    
+    left: 170px;
+  
+  }
+  
+}
+@media screen and (max-width:460px) {
+  .slider-section{
+    width: 100%;
+    margin: auto;
+  }
+  .proyects .containar-proyects .container-button_slider .btn-slider{
+    top:67%;
+  }
+  .proyects .containar-proyects .slider_btn-right {
+  
+    right: 100px;
+  }
+  .proyects .containar-proyects .slider_btn-left {
+    
+    left: 100px;
+  
+  }
+  .proyects .containar-proyects .slider_img {
+    width: 275px;
+  }
+  
+}
+@media screen and (max-width:380px) {
+
+  .proyects .containar-proyects .slider_img {
+    width: 220px;
+  }
+  .proyects .containar-proyects .container-button{
+    margin-top: 80px;
+  }
+}
 
 /**----- Fin del Mis Proyectos -----**/
 
@@ -605,16 +723,51 @@ button:hover {
   line-height: 20px;
 }
 .btn-cv{
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   text-decoration: none;
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   color: rgb(255, 0, 0);
- 
-  border: 1px solid #ff0000;
+  background-color: transparent;
+  outline: 2px solid rgb(255, 0, 0);
+  border: none;
   border-radius: 8px;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s;
+}
+
+.btn-cv:hover{
+  color: #000000;
+  z-index: 1;
+}
+
+.btn-cv::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 150%;
+  height: 100%;
+  background-color: #ff0000;
+  border: none;
+  outline: 3px solid rgb(0, 0, 0);
+  transform: scaleX(0) skewX(35deg);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 1s;
+}
+
+.btn-cv:hover::before{
+  
+  transform: scaleX(1) skewX(35deg);
 }
 
 
@@ -796,6 +949,7 @@ button:hover {
 /** Responsive **/
 
 @media screen and (max-width: 850px) {
+  /*--Responsive header--*/
   .menu-container { 
     padding: 10px;
   } 
@@ -841,21 +995,19 @@ button:hover {
     background: none;
     color: rgb(0, 0, 0);
   }
-  .title-welcome {
-    margin: 10px;
+
+  .linea {
     text-align: center;
     font-size: 28px;
   }
-  .linea {
-    max-width: 200px;
-    text-align: center;
-    font-size: 28px;
-    color: red;
+  .header-img .welcome p{ 
+    font-size: 32px;
+  }
+  .parrafo-welcome {
+    font-size: 68px;
   }
 
-  .parrafo-welcome {
-    font-size: 19px;
-  }
+  /*--Responsive Skills--*/
   .container-skills{
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
   }
@@ -865,11 +1017,6 @@ button:hover {
   .acerca-de .info-containar .info-estudios .estudios{
     width: 100%;
   }
-  .slider_img {
-    max-width: 280px;
-    height: 250px;
-  }
-  
 
   /*-Responsive box-servicios*/
   .title-servicios {
