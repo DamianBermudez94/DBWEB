@@ -65,6 +65,25 @@ function menu() {
       observer.observe(target);
     }
   });
+
+  const btnSwitch = document.querySelector("#switch");
+  btnSwitch.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    btnSwitch.classList.toggle("active");
+    //Guardamos el modo en localStorage
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("dark-mode", "true");
+    } else {
+      localStorage.setItem("dark-mode", "flase");
+    }
+  });
+  if (localStorage.getItem("dark-mode") === "true") {
+    document.body.classList.add("dark");
+    btnSwitch.classList.add("active");
+  } else {
+    document.body.classList.remove("dark");
+    btnSwitch.classList.remove("active");
+  }
 }
 
 // Efecto Scroll
@@ -161,21 +180,22 @@ function slider() {
   });
 }
 function enviarFormulario() {
-  const $form = document.querySelector("#formulario");
-  const $buttonEnviar = document.querySelector("#enviar-mail");
-  $form.addEventListener("submit", handleSubmit);
+  const form = document.querySelector("#formulario");
+  const buttonEnviar = document.querySelector("#enviar-mail");
+  form.addEventListener("submit", handleSubmit);
   function handleSubmit(event) {
     event.preventDefault();
     const form = new FormData(this);
-    $buttonEnviar.setAttribute(
+    buttonEnviar.setAttribute(
       "href",
-      `mailto:bermudezdamian7@gmail.com?subject= Nombre:${form.get(
-        "name"
-      )} Email:${form.get("mail")} Telefono:${form.get(
-        "phone"
-      )} Asunto:${form.get("asunto")}&body=${form.get("message")} `
+      `mailto:damianbermudezdev@damianbermudezdev.es?subject= Nombre:${form.get(
+        "nombre"
+      )}Email:${form.get("correo")} Telefono:${form.get(
+        "telefono"
+      )}&body=${form.get("mensaje")} `
     );
-    $buttonEnviar.click();
+    console.log(buttonEnviar);
+    buttonEnviar.click();
   }
 }
 
