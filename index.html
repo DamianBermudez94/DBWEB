@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB|WEB</title>
+    <title>Damián Bermúdez</title>
     <link rel="shortcut icon" href="./Img-proyectos/IconoDB (3).ico" type="image/x-icon">
     <!--Estilos-->
     <script src="https://kit.fontawesome.com/bdbed0aafa.js" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
             <div class="menu">
                 <ul class="list">
                     <li ><a href="#inicio"  class="active">Inicio</a></li>
-                    <li ><a href="#acerca-de">Acerca de</a></li>
-                    <li><a href="#proyectos">Mis proyectos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
+                    <li ><a href="#sobre-mi">Sobre mi</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#tecnologias">Tecnologías/Estudios</a></li>
                     <li ><a href="#contacto">Contacto</a></li>
                     <button class="switch active" id="switch">
                         <span class="btn-dark"><img class="img-dark" src="./Img-proyectos/sun.png" alt=""></span>
@@ -44,10 +44,15 @@
         </nav>
     <!-- IMG Header -->
     <div class="header-img container">
-        <div class="welcome">
-            <h1 class="title-welcome">Bienvenidos a DB|WEB</h1>
+        <img src="./img-welcome/stars.png" alt="" class="stars">
+            <img src="./img-welcome/space_ship.png" alt="" class="ship">
+            <img src="./img-welcome/astronaut.png" alt="" class="astronaut">
+            <img src="./img-welcome/comet.png" alt="" class="comet">
+            <img src="./img-welcome/moon.png" alt="" class="moon">
+        <div class="welcome animacionIzquierda ">
+            <h1 class="title-welcome">Bienvenidos a <span class="punto-color">DB|WEB.</span></h1>
             <hr class="linea">
-            <p class="parrafo-welcome parrafo-welcome--transform">Desarrollador Web front end</p>
+            <p class="parrafo-welcome parrafo-welcome--transform">Desarrollador Web front end<span class="punto-color">.</span></p>
             <button id="abajo"><i class="fas fa-chevron-down"></i></button>
         </div>
     </div>
@@ -55,50 +60,17 @@
     <div class="skew-abajo"></div>
     </header>
 
-    <!--Acerca de nosotros-->
+    <!--Sobre mi-->
     <main>
-        <section class="acerca-de" id="acerca-de">
+        <section class="sobre-mi" id="sobre-mi">
             
-            <div class="info-containar animacion container">
-                <h1>Sobre mi</h1>
-                <p>Hola!! Soy Damián Bermúdez estudiante de diseño, desarrollo y programación web, soy una persona muy autodidacta, proactiva y en pleno crecimiento.</p>
-                <div class="info-estudios" >
-                    <div class="tecnologias">
-                        <div>
-                            <p><i class="fas fa-code icon-title"></i></p>
-                            <hr>
-                            <h3 class="title">Habilidades</h3>
-                            <hr>
-                        </div>
-                        <div class="container-skills">
-                            <ul>
-                                <li><img class="img-skills" src="./img-tecnologias/html.png" alt="HTML"><p>HTML</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/css-3.png" alt="CSS-3"><p>CSS3</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/js.png" alt="JavaScripts"><p>JavaScript</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/typescript.png" alt="TypeScripts"><p>TypeScript</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/react.png" alt="React"><p>React js</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/nodejs.png" alt="Node-Js"><p>Node js</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/database.png" alt="Firebase"><p>Firebase</p></li>
-                                <li><img class="img-skills" src="./img-tecnologias/github.png" alt="Git-Hub"><p>Git Hub</p></li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div class="estudios">
-                      <p><i class="far fa-bookmark icon-title"></i></p>
-                      <hr>
-                      <h3 class="title">Mi formación como estudiante</h3>
-                      <hr>
-                      <p>Secundaria completa</p>
-                      <hr>
-                       <p>Formación autodidacta</p>
-                       <hr>
-                      <p>Curso de JS en udemy</p>
-                      <hr>
-                      <p>Actualmente estudiando en <a href="https://apx.school/">APX</a></p>
-                    </div>
+            <div class="info-containar animacion">
+                <h1 class="title-sobre__mi">Sobre mi</h1>
+                <div class="container__sobre-mi">
+                    <img  class="img-sobre__mi" src="./Img-proyectos/IMG_20211201_172156_831.jpg" alt="Damian Bermudez">
+                    <p class="parrafo-sobre__mi">Hola!! Soy Damián Bermúdez estudiante de diseño, desarrollo y programación web full stack. Empece a estudiar programación en 2020 en un instituto de mi localidad, por cuestiones de tiempo (muchas materias y además trabajo en un fabrica metalurgica 9 horas) tuve que dejar, empece de forma autodidacta con diferentes cursos en youtube hasta que me cruce con un anuncio en las redes sociales de la plataforma <a class="enlace-carrera" href="https://apx.school/" target="_blank">APX</a> donde actualmente estoy cursando la carrera de programacion web full stack.</p>
                 </div>
-            </div>
-            <a class="btn-cv" href="./archivo-pdf/Damián Bermúdez (3).pdf" download="CV-damian-bermudez.pdf">Descargar CV</a>
+            </div> 
         </section>
 
         <!--Nuestros proyectos-->
@@ -108,7 +80,7 @@
             <div class="ejezproyects">
                 <div class="containar-proyects container">
                     <div class="proyects-title">
-                        <h2>Mis Proyectos</h2>
+                        <h2>Proyectos</h2>
                         <hr>
                     </div>
                     <div class="container-slider">
@@ -158,37 +130,47 @@
             <div class="skew-abajo"></div>
         </section>
 
-        <!-- Coemntarios acerca de mi-->  
-        <section class="mis-servicios animacionIzquierda" id="servicios">
-            <div class="servicios-title">
-                <h2 class="title-servicios">Mis servicios</h2>
-                <hr>
+        <!--Tecnologias/Estudios-->  
+        <section class="seccion-skills animacionIzquierda" id="tecnologias">
+           
+             
+            <div class="container-estudios" >
+                <h2 class="title-tecnologia__estudio">Tecnologías/Estudios</h2>
+                <div class="tecnologias">
+                    <div>
+                        <p><i class="fas fa-code icon-title"></i></p>
+                        <hr>
+                        <h3 class="title-tecnologias">Tecnologías</h3>
+                        <hr>
+                    </div>
+                    <div class="container-skills">
+                        <ul>
+                            <li><img class="img-skills" src="./img-tecnologias/html.png" alt="HTML"><p>HTML</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/css-3.png" alt="CSS-3"><p>CSS3</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/js.png" alt="JavaScripts"><p>JavaScript</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/typescript.png" alt="TypeScripts"><p>TypeScript</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/react.png" alt="React"><p>React js</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/nodejs.png" alt="Node-Js"><p>Node js</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/database.png" alt="Firebase"><p>Firebase</p></li>
+                            <li><img class="img-skills" src="./img-tecnologias/github.png" alt="Git-Hub"><p>Git Hub</p></li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="estudios">
+                    
+                  <p><i class="far fa-bookmark icon-title"></i></p>
+                  <hr>
+                  <h3 class="title-estudios">Formación</h3>
+                  <hr>
+                  <p>Formación autodidacta diferentes cursos de YouTube</p>
+                  <hr>
+                  <p>Curso de JavaScript en udemy de Victor Robles</p>
+                  <hr>
+                  <p>Actualmente estudiando la carrera de programacion web full stack<a href="https://apx.school/">APX</a></p>
+                </div>
+                <a class="btn-cv" href="./archivo-pdf/Damián Bermúdez (4).pdf" download="CV-damian-bermudez.pdf">Descargar CV</a>
             </div>
-            <div class="box-servicios container">
-                <div class="card-servicios">
-                    <div class="card-img"><i class="fas fa-desktop"></i></div>
-                    <div class="servicios-text">
-                        <h4>Web Design</h4>
-                        <p>Sitios modernos para una mejor experiencia para el usuario.</p>
-                    </div>
-                </div>
-                <div class="card-servicios">
-                    <div class="card-img"><i class="fas fa-mobile-alt"></i></div>
-                    <div class="servicios-text">
-                        <h4>Responsive web design</h4>
-                        <p>Sitios modernos adaptados a diferentes pantallas:
-                            móvil,tablet,escritorio.
-                        </p>
-                    </div>
-                </div>
-                <div class="card-servicios">
-                    <div class="card-img"><i class="fas fa-desktop"></i></div>
-                    <div class="servicios-text">
-                        <h4>Web Site</h4>
-                        <p>Landing page, aplicaciones web.</p>
-                    </div>
-                </div>
-            </div>
+           
         </section>
         <section class="formulario-contacto" id="contacto" >
             <div class="skew-arriba"></div>

@@ -59,7 +59,6 @@ function menu() {
     });
 
     const hash = menuLink.getAttribute("href");
-
     const target = document.querySelector(hash);
     if (target) {
       observer.observe(target);
@@ -89,8 +88,7 @@ function menu() {
 // Efecto Scroll
 function scrolTop() {
   let containerMenu = document.querySelector(".menu-container");
-  // window = accedemos a toda la ventana del navegador
-  //pageYOffset = devuelve el valor en pixeles del scroll
+
   let goTop = document.querySelector(".go-top");
   let prevScrollPos = window.pageYOffset;
   window.onscroll = () => {
@@ -100,7 +98,7 @@ function scrolTop() {
       containerMenu.style.top = "0";
       containerMenu.style.transition = "0.5s";
     } else {
-      containerMenu.style.top = "-80px";
+      containerMenu.style.top = "-140px";
       containerMenu.style.transition = "0.5s";
     }
 
