@@ -149,7 +149,7 @@ function slider() {
   function nextRight() {
     let sliderSectionFirts = document.querySelectorAll(".slider-section")[0];
     slider.style.marginLeft = "0";
-    slider.style.transition = "all 0.3s";
+    slider.style.transition = "0.8s ease-in-out";
     setTimeout(function () {
       slider.style.transition = "none";
       slider.insertAdjacentElement("beforeend", sliderSectionFirts);
@@ -161,8 +161,7 @@ function slider() {
     let sliderSectionLast = sliderSection[sliderSection.length - 2];
     console.log("Soy la img", sliderSectionLast);
     slider.style.marginLeft = "0";
-    slider.style.transition = "all 0.5s";
-
+    slider.style.transition = "0.8s ease-in-out";
     setTimeout(function () {
       slider.style.transition = "none";
       slider.insertAdjacentElement("afterbegin", sliderSectionLast);
@@ -186,7 +185,7 @@ function enviarFormulario() {
     const form = new FormData(this);
     buttonEnviar.setAttribute(
       "href",
-      `mailto:damianbermudezdev@damianbermudezdev.es?subject= Nombre:${form.get(
+      `mailto:bermudezdamian7@gmail.com?subject= Nombre:${form.get(
         "nombre"
       )}Email:${form.get("correo")} Telefono:${form.get(
         "telefono"
