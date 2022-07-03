@@ -307,7 +307,7 @@ box-shadow:  0px 0px 2px 2px rgba(0,0,0,.2);
   height: 100%;
   transform: scaleX(0);
   transform-origin: left;
-  background:rgb(252, 136, 136);
+  background:rgba(252, 136, 136,0.8);
   animation:
       rollIn var(--duration) var(--delay) forwards,
       rollOut var(--duration) var(--total) forwards;
@@ -336,13 +336,13 @@ box-shadow:  0px 0px 2px 2px rgba(0,0,0,.2);
   height: 100%;
   transform: scaleX(0);
   transform-origin: left;
-  background:rgb(252, 136, 136);
+  background:rgba(252, 136, 136,0.8);
   animation:
       rollIn var(--duration) var(--delay) forwards,
       rollOut var(--duration) var(--total) forwards;
 }
 
-.title-welcome span:nth-child(1)::after {
+.title-welcome span:nth-child(2)::after {
   border-top: 3px solid rgb(252, 136, 136);
 }
 
@@ -368,7 +368,7 @@ box-shadow:  0px 0px 2px 2px rgba(0,0,0,.2);
   border: transparent;
   transform: scaleX(0);
   transform-origin: left;
-  background:rgb(252, 136, 136);
+  background:rgba(252, 136, 136,0.8);
   animation:
       rollIn var(--duration) var(--delay) forwards,
       rollOut var(--duration) var(--total) forwards;
